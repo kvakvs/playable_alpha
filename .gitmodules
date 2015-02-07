@@ -1,0 +1,3 @@
+[submodule "deps/hge2"]
+	path = deps/hge2
+	url = https://github.com/kvakvs/hge2.git
