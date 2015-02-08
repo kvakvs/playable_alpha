@@ -2,12 +2,5 @@
 
 namespace pa {
 
-Cell::~Cell()
-{
-}
-
-
-
-
 
 } // ns pa

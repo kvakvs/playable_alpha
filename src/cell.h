@@ -1,5 +1,7 @@
 #pragma once
 
+#include "biome.h"
+
 namespace pa {
 
 namespace cell {
@@ -17,14 +19,24 @@ class Cell
 {
 protected:
   cell::class_t m_class = cell::Empty;
+  biome::type_t m_biome = biome::Sky;
 
 public:
-  Cell() {
-  }
-  virtual ~Cell();
+  Cell() {}
+  //Cell(const Cell &other) = default;
 
-  virtual bool is_passable() = 0;
-  virtual bool is_see_through() = 0;
+  Cell(cell::class_t cls, biome::type_t bi)
+    : m_class(cls), m_biome(bi) {
+  }
+  //~Cell();
+
+  bool is_passable() const {
+    return m_class == cell::Empty || m_class == cell::Liquid;
+  }
+
+  bool is_see_through() const {
+    return m_class == cell::Empty || m_class == cell::Liquid;
+  }
 };
 
 } // ns pa

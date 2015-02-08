@@ -8,20 +8,20 @@ template <typename ComponentType>
 class Pair
 {
 public:
-  ComponentType m_x, m_y;
+  ComponentType x, y;
 
-  Pair(): m_x(0), m_y(0) {
+  Pair(): x(0), y(0) {
   }
-  Pair(const Pair &other): m_x(other.m_x), m_y(other.m_y) {
+  Pair(const Pair &other): x(other.x), y(other.y) {
   }
-  Pair(ComponentType x, ComponentType y): m_x(x), m_y(y) {
+  Pair(ComponentType xx, ComponentType yy): x(xx), y(yy) {
   }
 
   ~Pair() {
   }
 
   ComponentType get_area() const {
-    return m_x * m_y;
+    return x * y;
   }
 };
 
