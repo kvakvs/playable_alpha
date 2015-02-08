@@ -1,6 +1,6 @@
 #include "pa.h"
 
-#ifdef PLATFORM_UNIX
+#ifdef __linux
 int main(int /*argc*/, char * /*argv*/ [])
 #else
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)

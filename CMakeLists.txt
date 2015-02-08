@@ -13,12 +13,13 @@ include_directories(
   )
 
 set(PLAYABLE_SRCS
-    src/biome.cpp     src/biome.h
-    src/cell.cpp      src/cell.h
+    src/biome.cpp         src/biome.h
+    src/cell.cpp          src/cell.h
+    src/graphics.cpp      src/graphics.h
     src/main.cpp
-    src/pa.cpp        src/pa.h
-    src/types.cpp     src/types.h
-    src/world.cpp     src/world.h
+    src/pa.cpp            src/pa.h
+    src/types.cpp         src/types.h
+    src/world.cpp         src/world.h
   )
 
 add_definitions( -std=c++11 -Weverything -Wno-c++98-compat-pedantic -Wno-missing-noreturn
