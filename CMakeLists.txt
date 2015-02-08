@@ -5,13 +5,21 @@ set( CMAKE_RUNTIME_OUTPUT_DIRECTORY       ${CMAKE_SOURCE_DIR}/bin CACHE PATH "Si
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_SOURCE_DIR}/bin CACHE PATH "Single Directory for all Executables." )
 set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY       ${CMAKE_SOURCE_DIR}/linklib CACHE PATH "Single Directory for all static libraries." )
 
-include_directories(${CMAKE_SOURCE_DIR}/deps/hge2/src/core
-		    ${CMAKE_SOURCE_DIR}/deps/hge2/src/core/unix
-		    ${CMAKE_SOURCE_DIR}/deps/hge2/src/core/windows)
+include_directories(
+    ${CMAKE_SOURCE_DIR}/deps/hge2/include
+    ${CMAKE_SOURCE_DIR}/deps/hge2/src/core
+    ${CMAKE_SOURCE_DIR}/deps/hge2/src/core/unix
+    ${CMAKE_SOURCE_DIR}/deps/hge2/src/core/windows
+  )
 
 set(PLAYABLE_SRCS
-	src/main.cpp
-)
+    src/biome.cpp     src/biome.h
+    src/cell.cpp      src/cell.h
+    src/main.cpp
+    src/pa.cpp        src/pa.h
+    src/types.cpp     src/types.h
+    src/world.cpp     src/world.h
+  )
 
 add_definitions( -std=c++11 -Weverything -Wno-c++98-compat-pedantic -Wno-missing-noreturn
                  -Wno-c++98-compat -Wno-padded -Wno-format-nonliteral )
